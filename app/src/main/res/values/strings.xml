@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SnowflakeApp</string>
+    <string name="button_text">Winter is coming</string>
+    <string name="winter_message">Winter has come</string>
+</resources>
