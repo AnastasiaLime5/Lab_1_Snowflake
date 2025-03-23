@@ -12,7 +12,6 @@ import android.graphics.Color;
 
 public class SnowflakeFragment extends Fragment
 {
-
     private Button button;
     private LinearLayout snowflakeContainer;
     private int clickCount = 0;
@@ -69,23 +68,23 @@ public class SnowflakeFragment extends Fragment
 
     private void addSnowflake(int count)
     {
-        snowflakeContainer.removeAllViews(); // Очищаем контейнер перед добавлением новых снежинок
+        snowflakeContainer.removeAllViews();
         StringBuilder snowflakes = new StringBuilder();
         for (int i = 0; i < count; i++)
         {
-            snowflakes.append("* "); // Добавляем снежинку и пробел
+            snowflakes.append("* ");
         }
         for (int i = 0; i < count; i++)
         {
             TextView snowflake = new TextView(getContext());
-            snowflake.setText("*"); // Символ снежинки
-            snowflake.setTextSize(30); // Размер текста
-            snowflake.setTextColor(0xFFFFFFFF); // Белый цвет текста
+            snowflake.setText("*");
+            snowflake.setTextSize(30);
+            snowflake.setTextColor(0xFFFFFFFF);
             snowflake.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
             ));
-            snowflake.setPadding(8, 0, 8, 0); // Добавляем пробелы вокруг снежинки
+            snowflake.setPadding(8, 0, 8, 0);
             snowflakeContainer.addView(snowflake);
         }
     }
